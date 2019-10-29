@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>职工管理系统</title>
+    <link href="./static/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./static/jquery-easyui-1.7.0/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="./static/jquery-easyui-1.7.0/themes/icon.css">
+    <link href="./static/layui-v2.5.5/layui/css/layui.css" rel="stylesheet" />
+    <link href="./index.css" rel="stylesheet" />
+</head>
+<body>
+
+
+<table id="dg" class="easyui-datagrid" style="width:100%"
+       title="职工管理系统"
+       rownumbers="true" pagination="true" fitColumns="true" singleSelect="true" data-options="toolbar:'#tb'">
+    <thead>
+    <tr>
+        <th field="staffId" width="80">职工Id</th>
+        <th field="firstName" width="80">名</th>
+        <th field="lastName" width="80">姓</th>
+        <th field="major" width="80">专业</th>
+        <th field="bio" width="80">简介</th>
+        <th field="age" width="80">年龄</th>
+        <th field="grade" width="80">分数</th>
+        <th field="gpa" width="80">GPA</th>
+        <th field="gender" width="80">性别</th>
+        <th field="created" width="80">创建日期</th>
+        <th field="updated" width="80">编辑日期</th>
+    </tr>
+    </thead>
+
+</table>
+
+<div id="tb" style="padding:2px 5px;">
+    <div class="mr-10">
+        <input type="text" id="inputSearchStaff" placeholder="输入职工名字检索" class="pd-5px" />
+        <i id="inputSearchIcon" class="fa fa-search cr-lightblue" onclick="searchStaff()"></i>
+    </div>
+    <div class="cursorPointer" onclick="createStaff()">
+        <i class="fa fa-file-o cr-lightblue"></i>
+        <span>新建职工</span>
+    </div>
+</div>
+<script src="./static/jquery-easyui-1.7.0/jquery.min.js"></script>
+<script src="./static/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+<script src="./static/jquery-easyui-1.7.0/locale/easyui-lang-zh_CN.js"></script>
+<script src="./static/layui-v2.5.5/layui/layui.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
